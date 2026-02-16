@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import inhatc.cse.inhive.mapper.UserMapper;
 import inhatc.cse.inhive.response.Response;
 import inhatc.cse.inhive.user.dto.DoctorDTO;
-import inhatc.cse.inhive.user.dto.PatientDTO;
 import inhatc.cse.inhive.user.entity.UserEntity;
 import inhatc.cse.inhive.user.repository.UserRepository;
 import lombok.Builder;

@@ -8,23 +8,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import inhatc.cse.inhive.response.Response;
-import inhatc.cse.inhive.user.dto.PatientDTO;
-import inhatc.cse.inhive.user.service.PatientService;
+import inhatc.cse.inhive.user.dto.LoginRequestDTO;
+import inhatc.cse.inhive.user.dto.LoginResponseDTO;
+import inhatc.cse.inhive.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RestController
 @CrossOrigin(origins = "http://localhost:5173")
-@RequestMapping("/api/patients")
+@RequestMapping("/api/users")
 @RequiredArgsConstructor
-public class PatientController {
-    private final PatientService patientService;
+public class UserController {
+    private final UserService userService;
 
-    @PostMapping("/register")
-    public ResponseEntity<Response<Void>> registerPatient(@RequestBody PatientDTO patientDTO) {
-        return ResponseEntity.ok(patientService.registerPatient(patientDTO));
+    @PostMapping("/login")
+    public ResponseEntity<Response<LoginResponseDTO>> login(@RequestBody LoginRequestDTO loginRequestDTO) {
+        return ResponseEntity.ok(userService.login(loginRequestDTO));
     }
-
-
 }
