@@ -8,7 +8,6 @@ import inhatc.cse.inhive.exceptions.BadRequestException;
 import inhatc.cse.inhive.response.Response;
 import inhatc.cse.inhive.role.entity.RoleEntity;
 import inhatc.cse.inhive.role.repository.RoleRepository;
-import inhatc.cse.inhive.specialty.entity.SpecialtyEntity;
 import lombok.Builder;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
