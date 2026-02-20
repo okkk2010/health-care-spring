@@ -39,4 +39,16 @@ public class SpecialtyService {
                 .data(specialty.getName())
                 .build();
     }
+
+    public Response<String> getSpecialtyByName(String name) {
+        System.out.println("전공 이름: " + name); // 디버깅용 출력
+        SpecialtyEntity specialty = specialtyRepository.findByName(name)
+                            .orElseThrow(() -> new BadRequestException("전공 이름에 해당하는 전공을 찾을 수 없습니다."));
+        
+        return Response.<String>builder()
+                .statusCode(200)
+                .message("전공 조회 성공")
+                .data(specialty.getCode().toString())
+                .build();
+    }
 }

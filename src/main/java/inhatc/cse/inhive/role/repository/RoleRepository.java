@@ -12,6 +12,7 @@ import inhatc.cse.inhive.role.entity.RoleEntity;
 @Repository
 public interface RoleRepository extends JpaRepository<RoleEntity, Long> {
     Optional<RoleEntity> findByCode(Long code);
+    Optional<RoleEntity> findByName(String name);
 
     @Query("SELECT r.name FROM RoleEntity r")
     List<String> allRoleNames();

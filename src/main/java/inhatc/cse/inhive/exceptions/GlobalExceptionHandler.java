@@ -1,6 +1,6 @@
 package inhatc.cse.inhive.exceptions;
 
-import org.apache.coyote.BadRequestException;
+import inhatc.cse.inhive.exceptions.BadRequestException;
 import org.springframework.data.crossstore.ChangeSetPersister.NotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -39,3 +39,4 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
 }
+
