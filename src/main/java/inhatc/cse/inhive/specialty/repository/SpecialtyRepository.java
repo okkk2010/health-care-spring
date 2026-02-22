@@ -12,6 +12,7 @@ import inhatc.cse.inhive.specialty.entity.SpecialtyEntity;
 @Repository
 public interface SpecialtyRepository extends JpaRepository<SpecialtyEntity, Long> {
     Optional<SpecialtyEntity> findByCode(Long code);
+    Optional<SpecialtyEntity> findByName(String name);
 
     @Query("SELECT s.name FROM SpecialtyEntity s")
     List<String> allSpecialtyNames();

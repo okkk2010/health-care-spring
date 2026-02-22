@@ -13,7 +13,7 @@ import lombok.RequiredArgsConstructor;
 public class UserMapper {
     private final ModelMapper modelMapper;
 
-    public DoctorDTO toDTO(UserEntity userEntity) {
+    public DoctorDTO toDoctorDTO(UserEntity userEntity) {
         if (userEntity == null) {
             return null;
         }

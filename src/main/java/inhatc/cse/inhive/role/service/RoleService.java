@@ -29,7 +29,7 @@ public class RoleService {
                 .build();
     }
 
-        public Response<String> getRoleByCode(String code) {
+    public Response<String> getRoleByCode(String code) {
         RoleEntity role = roleRepository.findByCode(Long.valueOf(code))
                             .orElseThrow(() -> new BadRequestException("역할 코드에 해당하는 역할을 찾을 수 없습니다."));
 
@@ -37,6 +37,17 @@ public class RoleService {
                 .statusCode(200)
                 .message("역할 조회 성공")
                 .data(role.getName())
+                .build();
+    }
+
+    public Response<String> getRoleByName(String name) {
+        RoleEntity role = roleRepository.findByName(name)
+                            .orElseThrow(() -> new BadRequestException("역할 이름에 해당하는 역할을 찾을 수 없습니다."));
+
+        return Response.<String>builder()
+                .statusCode(200)
+                .message("역할 조회 성공")
+                .data(role.getCode().toString())
                 .build();
     }
 }
