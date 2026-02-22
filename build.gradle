@@ -37,8 +37,9 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-validation-test'
 	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-	//mysql 연결 코드 추가(승진)
-	runtimeOnly 'com.mysql:mysql-connector-j'
+	// //mysql 연결 코드 추가(승진)
+	// runtimeOnly 'com.mysql:mysql-connector-j' 
+	// *mysql 연결 코드 비활성화 후 PostgreSQL 연결 코드 활성화
 }
 
 tasks.named('test') {
