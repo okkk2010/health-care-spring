@@ -38,3 +38,5 @@ out/
 
 ### security.properties ###
 src/main/resources/security.properties
+
+uploads/recordings
